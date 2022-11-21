@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\Harpreet Aulakh\Desktop\SEMESTER 4\ASP.NET\F2022A5HKA\F2022A5HKA\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Users\Harpreet Aulakh\Desktop\SEMESTER 4\ASP.NET\F2022A5HKA\F2022A5HKA\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\Harpreet Aulakh\Desktop\SEMESTER 4\ASP.NET\F2022A5HKA\F2022A5HKA\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

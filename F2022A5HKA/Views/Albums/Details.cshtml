@@ -1,0 +1,90 @@
+﻿@model F2022A5HKA.Models.AlbumWithDetailViewModel
+
+@{
+    ViewBag.Title = $"Details - {Model.Name}";
+    var tracks = Model.Tracks.Count();
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Album details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AlbumId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlbumId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Coordinator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Coordinator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlAlbum)
+        </dt>
+
+        <dd>
+            <img src="@Html.DisplayFor(model => model.UrlAlbum)" alt="@Html.DisplayFor(model => model.Name)" width="250" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Depiction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Depiction)
+        </dd>
+        <dt>
+            Number of tracks on album
+        </dt>
+
+        <dd>
+            @tracks
+        </dd>
+
+        <dt>
+            Artists on album
+        </dt>
+
+        @foreach (var artist in Model.ArtistNames)
+        {
+            <dd>@artist</dd>
+        }
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Add Track", "AddTrack", new { id = Model.AlbumId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
